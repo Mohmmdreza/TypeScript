@@ -10,3 +10,18 @@
 // button.addEventListener("click", function () {
 //   console.log(add(+input1.value, +input2.value))
 //  })
+
+
+function add (num1:number , num2:number){
+    if(typeof num1 !== "number" || typeof num2 !== "number"){
+        throw new Error("incorrect type!")
+    }
+    return num1 + num2;
+}
+
+const number1 ="5"; 
+const number2 = 6 ;
+
+const result = add(number1, number2) ;
+
+console.log(result)
