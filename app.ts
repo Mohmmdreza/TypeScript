@@ -1,18 +1,16 @@
-type Conbindable = number | string
-
-
-function combine (input1:Conbindable, input2:Conbindable) {
-  
-    let result ;
-    if(typeof input1 ==='number' && typeof input2 ==='number') {
-        result = input1 + input2;
-    }
-    else{
-        result = input1.toString() + input2.toString()
-    }
-   return result
+function add (num1 :number , num2:number):number{
+    return num1 + num2;
 }
 
-const conbineNames = combine("Mamzi" , "F");
+function printResult (num:number):void{
+    console.log("Result is : " + num);
+}
 
-console.log(conbineNames)
+let combineValue :(a:number , b:number)=>number;
+
+ combineValue = add;
+
+// combineValue =printResult
+
+
+printResult(combineValue(1,2))
