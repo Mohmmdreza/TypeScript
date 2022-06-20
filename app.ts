@@ -1,5 +1,7 @@
+type Conbindable = number | string
 
-function combine (input1:number | string, input2:number | string ) {
+
+function combine (input1:Conbindable, input2:Conbindable) {
   
     let result ;
     if(typeof input1 ==='number' && typeof input2 ==='number') {
