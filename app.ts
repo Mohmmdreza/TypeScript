@@ -3,8 +3,16 @@
 //     age: number;
 // } = { name : "Mamzi" , age: 21}
 
-const person ={
-    name: "Mamzi" , age:21 , hobbies :["Sport" , "Food"]
+const person:{
+    name: string, 
+    age:number , 
+    hobbies: string[] ,
+    role:[number , string]
+} ={
+    name: "Mamzi" ,
+     age:21 , 
+     hobbies :["Sport" , "Food"],
+     role:[1 , "author"]
 }
 
 let favoriteActivities:string[];
