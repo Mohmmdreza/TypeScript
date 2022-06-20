@@ -25,7 +25,8 @@ function add (num1:number , num2:number ,showResult:boolean , phrase:string) {
     else return num1 + num2;
 }
 
-const number1 =5; 
+let number1:number ; 
+number1 = 5;  
 const number2 = 6 ;
 const printResult =  true ; 
 const resultPhrase = "Phrase is: "
