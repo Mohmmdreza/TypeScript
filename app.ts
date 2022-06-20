@@ -12,16 +12,23 @@
 //  })
 
 
-function add (num1:number , num2:number){
-    if(typeof num1 !== "number" || typeof num2 !== "number"){
-        throw new Error("incorrect type!")
+function add (num1:number , num2:number ,showResult:boolean , phrase:string) {
+    // if(typeof num1 !== "number" || typeof num2 !== "number"){
+    //     throw new Error("incorrect type!")
+    // }
+
+    let result = num1 + num2
+
+    if (showResult){
+        console.log(phrase + result)
     }
-    return num1 + num2;
+    else return num1 + num2;
 }
 
-const number1 ="5"; 
+const number1 =5; 
 const number2 = 6 ;
+const printResult =  true ; 
+const resultPhrase = "Phrase is: "
 
-const result = add(number1, number2) ;
+const result = add(number1, number2 ,printResult ,resultPhrase) ;
 
-console.log(result)
