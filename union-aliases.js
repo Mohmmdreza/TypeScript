@@ -11,4 +11,3 @@ function combine(input1, input2) {
 }
 const conbineNames = combine("Mamzi", "F");
 console.log(conbineNames);
-//# sourceMappingURL=union-aliases.js.map
