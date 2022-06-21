@@ -1,17 +1,9 @@
-function add(num1, num2) {
-    return num1 + num2;
+var userInput;
+var userName;
+if (typeof userInput === "string") {
+    userName = userInput;
 }
-function addHandle(n1, n2, cb) {
-    var result = n1 + n2;
-    cb(result);
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-function printResult(num) {
-    console.log("Result is : " + num);
-}
-var combineValue;
-combineValue = add;
-// combineValue =printResult
-printResult(combineValue(1, 2));
-addHandle(10, "20", function (ansewer) {
-    console.log(ansewer);
-});
+generateError("This is an error", 500);
