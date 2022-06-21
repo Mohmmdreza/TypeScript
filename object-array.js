@@ -15,3 +15,4 @@ for (let hobby of person.hobbies) {
     console.log(hobby.toUpperCase());
 }
 console.log(person);
+//# sourceMappingURL=object-array.js.map

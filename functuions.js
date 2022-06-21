@@ -16,3 +16,4 @@ printResult(combineValue(1, 2));
 addHandle(10, 20, (ansewer) => {
     console.log(ansewer);
 });
+//# sourceMappingURL=functuions.js.map
