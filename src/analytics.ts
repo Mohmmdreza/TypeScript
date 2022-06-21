@@ -1,3 +1,1 @@
-const userName = "Mamzi" ; 
-
-console.log(userName)
+console.log("Loading ...")
