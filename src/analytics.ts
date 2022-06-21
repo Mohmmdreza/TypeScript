@@ -1,16 +1,15 @@
-function sendAnalytics(data){
-    console.log(data)
+function sendAnalytics(data: string) {
+  console.log(data)
 }
 
-sendAnalytics("Send this");
+sendAnalytics("Send this")
 
+const clickbutton = document.querySelector("button")! as HTMLButtonElement
 
-const button = document.querySelector("button")!;
-
-function clickHandler(message:string){
-    console.log(message)
+function clickHandler(message: string) {
+  console.log(message)
 }
 
-if(button){
-button.addEventListener("click",clickHandler.bind(null , "Your Welcome"));
+if (clickbutton) {
+  clickbutton.addEventListener("click", clickHandler.bind(null, "Your Welcome"))
 }
