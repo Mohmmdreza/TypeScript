@@ -23,14 +23,29 @@
 
 // console.log(isOld)
 
-const add = (a:number , b:number)=>  a + b;
+// const add = (a:number , b:number)=>  a + b;
 
-const printOutput:(a:number | string) => void = output => console.log(output);
+// const printOutput:(a:number | string) => void = output => console.log(output);
 
-const button = document.querySelector("button");
+// const button = document.querySelector("button");
 
-if(button){
-    button.addEgitventListener("click", event => console.log(event))
+// if(button){
+//     button.addEgitventListener("click", event => console.log(event))
+// }
+
+// printOutput(add(5,2))
+
+const hobbies = ["Sport" , "Food"] ; 
+
+const activityHobbies = ["Hiking"] 
+
+activityHobbies.push(...hobbies);  //or  activityHobbies = ["Hiking" , ...hobbies] 
+
+const person ={
+    name:"Mamzi", age:21
+
 }
 
-printOutput(add(5,2))
+const copiedPerson = {...person}
+
+console.log(copiedPerson)
