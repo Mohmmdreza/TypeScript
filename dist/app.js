@@ -21,11 +21,17 @@
 //     button.addEgitventListener("click", event => console.log(event))
 // }
 // printOutput(add(5,2))
-const hobbies = ["Sport", "Food"];
-const activityHobbies = ["Hiking"];
-activityHobbies.push(...hobbies); //or  activityHobbies = ["Hiking" , ...hobbies] 
-const person = {
-    name: "Mamzi", age: 21
+// const hobbies = ["Sport" , "Food"] ; 
+// const activityHobbies = ["Hiking"] 
+// activityHobbies.push(...hobbies);  //or  activityHobbies = ["Hiking" , ...hobbies] 
+// const person ={
+//     name:"Mamzi", age:21
+// }
+// const copiedPerson = {...person}
+const add = (...numbers) => {
+    return numbers.reduce((curResult, curValue) => {
+        return curResult + curValue;
+    }, 0);
 };
-const copiedPerson = Object.assign({}, person);
-console.log(copiedPerson);
+const addNumbers = add(1, 2, 3, 4, 5);
+console.log(addNumbers);

@@ -35,17 +35,25 @@
 
 // printOutput(add(5,2))
 
-const hobbies = ["Sport" , "Food"] ; 
+// const hobbies = ["Sport" , "Food"] ; 
 
-const activityHobbies = ["Hiking"] 
+// const activityHobbies = ["Hiking"] 
 
-activityHobbies.push(...hobbies);  //or  activityHobbies = ["Hiking" , ...hobbies] 
+// activityHobbies.push(...hobbies);  //or  activityHobbies = ["Hiking" , ...hobbies] 
 
-const person ={
-    name:"Mamzi", age:21
+// const person ={
+//     name:"Mamzi", age:21
 
+// }
+
+// const copiedPerson = {...person}
+
+const add = (...numbers: number[]) =>{
+    return numbers.reduce((curResult,curValue)=>{
+            return curResult + curValue
+    }, 0)
 }
 
-const copiedPerson = {...person}
+const addNumbers = add(1,2,3,4,5)
 
-console.log(copiedPerson)
+console.log(addNumbers)
