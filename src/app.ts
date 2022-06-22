@@ -4,21 +4,33 @@
 //     console.log("Click")
 // })
 
-var result;
+// var result;
 
-let age = 29;
+// let age = 29;
 
-function add(a:number , b:number){
+// function add(a:number , b:number){
 
-    result = a+b;
-    return result;
+//     result = a+b;
+//     return result;
 
+// }
+
+// console.log(result);    
+
+// if(age > 20){
+//     let isOld =true
+// }
+
+// console.log(isOld)
+
+const add = (a:number , b:number)=>  a + b;
+
+const printOutput:(a:number | string) => void = output => console.log(output);
+
+const button = document.querySelector("button");
+
+if(button){
+    button.addEgitventListener("click", event => console.log(event))
 }
 
-console.log(result);    
-
-if(age > 20){
-    let isOld =true
-}
-
-console.log(isOld)
+printOutput(add(5,2))
