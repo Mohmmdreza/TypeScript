@@ -61,6 +61,7 @@
 
 class Departments {
     name:string
+    private employees:string[] =[]
 
     constructor(name:string){
         this.name = name
@@ -68,15 +69,36 @@ class Departments {
 
     describe(this: Departments){
         console.log("Department:" + this.name)
+        console.log(this)
     }
+
+    addEmployee(employee:string){
+        this.employees.push(employee)
+    }
+
+
+    printEmployeeInformation(){
+        console.log(this.employees.length);
+        console.log(this.employees)
+    }
+
 }
 
 const accounting = new Departments ("Accounting");
 
+
+
 accounting.describe();
 
-const copyAccounting ={name:"MAMZI" , describe:accounting.describe}
+accounting.addEmployee("Mamzi");
+accounting.addEmployee("Mahdi")
 
-copyAccounting.describe();
+accounting.employees[2]="Anna"
+
+accounting.printEmployeeInformation()
+
+// const copyAccounting ={name:"MAMZI" , describe:accounting.describe}
+
+// copyAccounting.describe();
 
 console.log(accounting)

@@ -38,14 +38,27 @@
 // console.log(addNumbers)
 class Departments {
     constructor(name) {
+        this.employees = [];
         this.name = name;
     }
     describe() {
         console.log("Department:" + this.name);
+        console.log(this);
+    }
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+    printEmployeeInformation() {
+        console.log(this.employees.length);
+        console.log(this.employees);
     }
 }
 const accounting = new Departments("Accounting");
 accounting.describe();
-const copyAccounting = { name: "MAMZI", describe: accounting.describe };
-copyAccounting.describe();
+accounting.addEmployee("Mamzi");
+accounting.addEmployee("Mahdi");
+accounting.employees[2] = "Anna";
+accounting.printEmployeeInformation();
+// const copyAccounting ={name:"MAMZI" , describe:accounting.describe}
+// copyAccounting.describe();
 console.log(accounting);
