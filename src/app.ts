@@ -65,8 +65,18 @@ class Departments {
     constructor(name:string){
         this.name = name
     }
+
+    describe(this: Departments){
+        console.log("Department:" + this.name)
+    }
 }
 
 const accounting = new Departments ("Accounting");
+
+accounting.describe();
+
+const copyAccounting ={name:"MAMZI" , describe:accounting.describe}
+
+copyAccounting.describe();
 
 console.log(accounting)

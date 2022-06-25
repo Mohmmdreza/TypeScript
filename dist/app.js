@@ -40,6 +40,12 @@ class Departments {
     constructor(name) {
         this.name = name;
     }
+    describe() {
+        console.log("Department:" + this.name);
+    }
 }
 const accounting = new Departments("Accounting");
+accounting.describe();
+const copyAccounting = { name: "MAMZI", describe: accounting.describe };
+copyAccounting.describe();
 console.log(accounting);
