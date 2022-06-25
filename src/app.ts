@@ -48,12 +48,25 @@
 
 // const copiedPerson = {...person}
 
-const add = (...numbers: number[]) =>{
-    return numbers.reduce((curResult,curValue)=>{
-            return curResult + curValue
-    }, 0)
+// const plusNum = (...numbers: number[]) =>{
+//     console.log(numbers)
+//     return numbers.reduce((curResult,curValue)=>{
+//             return curResult + curValue
+//     }, 0)
+// }
+
+// const addNumbers = plusNum(1,2,3,4,5)
+
+// console.log(addNumbers)
+
+class Departments {
+    name:string
+
+    constructor(name:string){
+        this.name = name
+    }
 }
 
-const addNumbers = add(1,2,3,4,5)
+const accounting = new Departments ("Accounting");
 
-console.log(addNumbers)
+console.log(accounting)

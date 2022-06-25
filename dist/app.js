@@ -28,10 +28,18 @@
 //     name:"Mamzi", age:21
 // }
 // const copiedPerson = {...person}
-const add = (...numbers) => {
-    return numbers.reduce((curResult, curValue) => {
-        return curResult + curValue;
-    }, 0);
-};
-const addNumbers = add(1, 2, 3, 4, 5);
-console.log(addNumbers);
+// const plusNum = (...numbers: number[]) =>{
+//     console.log(numbers)
+//     return numbers.reduce((curResult,curValue)=>{
+//             return curResult + curValue
+//     }, 0)
+// }
+// const addNumbers = plusNum(1,2,3,4,5)
+// console.log(addNumbers)
+class Departments {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const accounting = new Departments("Accounting");
+console.log(accounting);
