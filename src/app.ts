@@ -93,7 +93,9 @@ accounting.describe();
 accounting.addEmployee("Mamzi");
 accounting.addEmployee("Mahdi")
 
-accounting.employees[2]="Anna"
+// accounting.employees[2]="Anna"
+
+accounting.name="NEW NAME"
 
 accounting.printEmployeeInformation()
 
