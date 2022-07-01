@@ -64,7 +64,7 @@ class Departments {
     // name:string
     private employees:string[] =[]
 
-    constructor(public name:string , private id:string){
+    constructor(public name:string , private readonly id:string){
         this.id=id
         this.name = name
     }
