@@ -64,14 +64,13 @@ class Departments {
     // name:string
     private employees:string[] =[]
 
-    constructor(public name:string , private readonly id:string){
+    constructor(private readonly id:string,public name:string ){
         this.id=id
         this.name = name
     }
 
     describe(this: Departments){
         console.log(`Department(${this.id}): ${this.name}`)
-        console.log(this)
     }
 
     addEmployee(employee:string){
@@ -86,23 +85,52 @@ class Departments {
 
 }
 
-const accounting = new Departments ("Accounting","1" ;
+class ITDepartment extends Departments{
+    admins:string[]
+    constructor(id:string , admins:string[]){
+        super(id,'IT');
+        this.admins=admins;
+    }
+}
+
+class AccountingDepartment extends Departments { 
+    constructor(id:string , private reports:string[]){
+        super(id,'Accounting');
+    }
+
+    addReport(text:string){
+        this.reports.push(text);
+    }
+
+    printReport(){
+        console.log(this.reports)
+    }
+}
+
+const it = new ITDepartment ("d1",['Mamzi']) ;
 
 
 
-accounting.describe();
+it.describe();
 
-accounting.addEmployee("Mamzi");
-accounting.addEmployee("Mahdi")
+it.addEmployee("Mamzi");
+it.addEmployee("Mahdi")
 
-// accounting.employees[2]="Anna"
+// it.employees[2]="Anna"
 
-accounting.name="NEW NAME"
+it.name="NEW NAME"
 
-accounting.printEmployeeInformation()
+it.printEmployeeInformation()
 
-// const copyAccounting ={name:"MAMZI" , describe:accounting.describe}
+// const copyit ={name:"MAMZI" , describe:it.describe}
 
-// copyAccounting.describe();
+// copyit.describe();
 
-console.log(accounting)
+console.log(it)
+
+
+const accounting = new AccountingDepartment ("d2" ,[])
+
+accounting.addReport("Test reports") ;
+
+accounting.printReport()

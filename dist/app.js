@@ -37,9 +37,9 @@
 // const addNumbers = plusNum(1,2,3,4,5)
 // console.log(addNumbers)
 class Departments {
-    constructor(name, id) {
-        this.name = name;
+    constructor(id, name) {
         this.id = id;
+        this.name = name;
         // id:string;
         // name:string
         this.employees = [];
@@ -48,7 +48,6 @@ class Departments {
     }
     describe() {
         console.log(`Department(${this.id}): ${this.name}`);
-        console.log(this);
     }
     addEmployee(employee) {
         this.employees.push(employee);
@@ -58,13 +57,34 @@ class Departments {
         console.log(this.employees);
     }
 }
-const accounting = new Departments("Accounting", "1");
-accounting.describe();
-accounting.addEmployee("Mamzi");
-accounting.addEmployee("Mahdi");
-// accounting.employees[2]="Anna"
-accounting.name = "NEW NAME";
-accounting.printEmployeeInformation();
-// const copyAccounting ={name:"MAMZI" , describe:accounting.describe}
-// copyAccounting.describe();
-console.log(accounting);
+class ITDepartment extends Departments {
+    constructor(id, admins) {
+        super(id, 'IT');
+        this.admins = admins;
+    }
+}
+class AccountingDepartment extends Departments {
+    constructor(id, reports) {
+        super(id, 'Accounting');
+        this.reports = reports;
+    }
+    addReport(text) {
+        this.reports.push(text);
+    }
+    printReport() {
+        console.log(this.reports);
+    }
+}
+const it = new ITDepartment("d1", ['Mamzi']);
+it.describe();
+it.addEmployee("Mamzi");
+it.addEmployee("Mahdi");
+// it.employees[2]="Anna"
+it.name = "NEW NAME";
+it.printEmployeeInformation();
+// const copyit ={name:"MAMZI" , describe:it.describe}
+// copyit.describe();
+console.log(it);
+const accounting = new AccountingDepartment("d2", []);
+accounting.addReport("Test reports");
+accounting.printReport();
