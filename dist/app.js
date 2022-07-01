@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 // const button = document.querySelector("button") !;
 // button.addEventListener("click",()=>{
 //     console.log("Click")
@@ -9,7 +9,7 @@
 //     result = a+b;
 //     return result;
 // }
-// console.log(result);
+// console.log(result);    
 // if(age > 20){
 //     let isOld =true
 // }
@@ -21,9 +21,9 @@
 //     button.addEgitventListener("click", event => console.log(event))
 // }
 // printOutput(add(5,2))
-// const hobbies = ["Sport" , "Food"] ;
-// const activityHobbies = ["Hiking"]
-// activityHobbies.push(...hobbies);  //or  activityHobbies = ["Hiking" , ...hobbies]
+// const hobbies = ["Sport" , "Food"] ; 
+// const activityHobbies = ["Hiking"] 
+// activityHobbies.push(...hobbies);  //or  activityHobbies = ["Hiking" , ...hobbies] 
 // const person ={
 //     name:"Mamzi", age:21
 // }
@@ -37,29 +37,34 @@
 // const addNumbers = plusNum(1,2,3,4,5)
 // console.log(addNumbers)
 class Departments {
-  constructor(name) {
-    this.employees = []
-    this.name = name
-  }
-  describe() {
-    console.log("Department:" + this.name)
-    console.log(this)
-  }
-  addEmployee(employee) {
-    this.employees.push(employee)
-  }
-  printEmployeeInformation() {
-    console.log(this.employees.length)
-    console.log(this.employees)
-  }
+    constructor(name, id) {
+        this.name = name;
+        this.id = id;
+        // id:string;
+        // name:string
+        this.employees = [];
+        this.id = id;
+        this.name = name;
+    }
+    describe() {
+        console.log(`Department(${this.id}): ${this.name}`);
+        console.log(this);
+    }
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+    printEmployeeInformation() {
+        console.log(this.employees.length);
+        console.log(this.employees);
+    }
 }
-const accounting = new Departments("Accounting")
-accounting.describe()
-accounting.addEmployee("Mamzi")
-accounting.addEmployee("Mahdi")
+const accounting = new Departments("Accounting", "1");
+accounting.describe();
+accounting.addEmployee("Mamzi");
+accounting.addEmployee("Mahdi");
 // accounting.employees[2]="Anna"
-// accounting.name = "NEW NAME";
-accounting.printEmployeeInformation()
+accounting.name = "NEW NAME";
+accounting.printEmployeeInformation();
 // const copyAccounting ={name:"MAMZI" , describe:accounting.describe}
 // copyAccounting.describe();
-console.log(accounting)
+console.log(accounting);

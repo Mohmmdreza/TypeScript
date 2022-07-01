@@ -60,15 +60,17 @@
 // console.log(addNumbers)
 
 class Departments {
-    name:string
+    // id:string;
+    // name:string
     private employees:string[] =[]
 
-    constructor(name:string){
+    constructor(public name:string , private id:string){
+        this.id=id
         this.name = name
     }
 
     describe(this: Departments){
-        console.log("Department:" + this.name)
+        console.log(`Department(${this.id}): ${this.name}`)
         console.log(this)
     }
 
@@ -84,7 +86,7 @@ class Departments {
 
 }
 
-const accounting = new Departments ("Accounting");
+const accounting = new Departments ("Accounting","1" ;
 
 
 
