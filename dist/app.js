@@ -46,6 +46,9 @@ class Departments {
         this.id = id;
         this.name = name;
     }
+    static creatEmployee(name) {
+        return { name };
+    }
     describe() {
         console.log(`Department(${this.id}): ${this.name}`);
     }
@@ -104,3 +107,5 @@ accounting.addReport("Test reports");
 console.log(accounting.mostRecentReport);
 accounting.mostRecentReport = 'Most Year Report';
 accounting.printReport();
+const employee1 = Departments.creatEmployee("Mamzi");
+console.log(employee1);

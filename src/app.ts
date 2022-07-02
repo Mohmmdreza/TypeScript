@@ -69,6 +69,12 @@ class Departments {
         this.name = name
     }
 
+   static creatEmployee(name:string){
+
+        return {name}
+
+    }
+
     describe(this: Departments){
         console.log(`Department(${this.id}): ${this.name}`)
     }
@@ -156,3 +162,6 @@ console.log(accounting.mostRecentReport)
 
 accounting.mostRecentReport = 'Most Year Report'
 accounting.printReport()
+
+const employee1 = Departments.creatEmployee("Mamzi");
+console.log(employee1)
