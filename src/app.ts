@@ -7,6 +7,16 @@ interface Greetable extends Named {
     greet (phrase:string):void ;
 }
 
+interface AddFn{
+    (a:number , b:number):number
+}
+
+let add:AddF;
+
+add = (n1:number , n2:number)=>{
+    return n1 + n2
+}
+
 class Person implements Greetable{
     name:string;
     age=30;
