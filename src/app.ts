@@ -85,3 +85,13 @@ moveAnimal({type:'bird' , flySpeed:10})
 if(userInputEL){
     (userInputEL as HtmlInputElement).value = "Hi Mamzi"
 }
+
+
+interface ErrorContainer{
+    [prop:string]:string;
+}
+
+const errorBag :ErrorContainer ={
+    email: "Not Valid Email",
+   
+}
