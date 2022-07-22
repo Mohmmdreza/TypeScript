@@ -40,3 +40,6 @@ const userInputEL = document.getElementById("user-input");
 if (userInputEL) {
     userInputEL.value = "Hi Mamzi";
 }
+const errorBag = {
+    email: "Not Valid Email",
+};
